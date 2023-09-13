@@ -9,7 +9,7 @@ export const getALLjobitems = async () => {
 }
 export const postJobdetail = async () => {
 
-    const response = await axios.post(`${BASE_URL}/employers/list_create-job/`)
+    const response = await axios.get(`${BASE_URL}/employers/list_create-job/`)
     return response.data;
 
 }
@@ -21,10 +21,9 @@ export const getALLjoblists = async () => {
 }
 
 
+export const getALLjobid = async (id) => {
 
-export const getALLjobupdateId = async (id) => {
-
-    const response = await axios.get(`${BASE_URL}/api/v1/update-job/${id}/`)
+    const response = await axios.put(`${BASE_URL}/employers/update-job/${id}`)
     return response.data;
-
 }
+

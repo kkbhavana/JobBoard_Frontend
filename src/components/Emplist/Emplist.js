@@ -31,7 +31,7 @@ function EmpList() {
            <p>Skills : {job.skills}</p>
            
             <p>Salary : {job.salary}</p>
- <Link to={`/update/${job.id}`}>
+ <Link to={`/updatejob/${job.id}`}>
  <button>Update</button>
           </Link>
          

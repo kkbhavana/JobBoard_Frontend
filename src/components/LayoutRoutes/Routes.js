@@ -10,6 +10,7 @@ import Emplist from '../Emplist/Emplist'
 import CreateJob from '../CreateJob/CreateJob'
 import ApplicationForm from '../ApplicationFrom/ApplicationForm'
 import Joblist from '../Joblist/Joblist'
+import Update from '../Update/Update'
 
 
 
@@ -21,14 +22,15 @@ function RoutesLayout() {
       <Header/>
             <Routes>
                 <Route path='/' element={<Home/>}/>
-                <Route path='frontpage' element={<Front/>}/>
-                <Route path='empsignup' element={<EmpSignup/>}/>
-                <Route path='jobsignup' element={<JobSignup/>}/>
-                <Route path='login' element={<Login/>}/>
-                <Route path='add_job' element={<CreateJob/>}/>
-                <Route path='emplist' element={<Emplist/>}/>
-                <Route path='joblist' element={<Joblist/>}/>
-                <Route path='applicaton_form' element={<ApplicationForm/>}/>
+                <Route path='/frontpage' element={<Front/>}/>
+                <Route path='/empsignup' element={<EmpSignup/>}/>
+                <Route path='/jobsignup' element={<JobSignup/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/add_job' element={<CreateJob/>}/>
+                <Route path='/emplist' element={<Emplist/>}/>
+                <Route path='/joblist' element={<Joblist/>}/>
+                <Route path='/updatejob/:id/' element={<Update/>}/>
+                <Route path='/applicaton_form' element={<ApplicationForm/>}/>
            </Routes>
        
       </Router>
