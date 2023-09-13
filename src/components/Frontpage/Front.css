@@ -1,0 +1,24 @@
+
+.home_container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 100px;
+}
+.title_card{
+    margin: 50px;
+    padding: 30px;
+}
+h1{
+    font-size: 40px;
+    font-weight:bold;
+   color: #6a1aa3;
+}
+button{
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color:#9d3ae3;
+    border: none;
+    color: #fff;
+    margin: 20px;
+}

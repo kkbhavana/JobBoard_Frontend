@@ -1,0 +1,12 @@
+.container{
+    margin: 80px;
+   
+}
+.jobdetails{
+  margin: 20px;
+  padding: 20px 40px;
+  box-shadow: 5px 5px 10px rgb(218, 215, 220);
+}
+button{
+    margin: 20px;
+}
