@@ -1,5 +1,5 @@
 .header{
-    background-color: #fff;
+
     padding: 20px;
     color:#fff;
     display: flex;
@@ -7,6 +7,16 @@
 }
 .header h1{
     margin: 0;
+}
+.login-button{
+   
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color:#8e30d1;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+
 }
 
 

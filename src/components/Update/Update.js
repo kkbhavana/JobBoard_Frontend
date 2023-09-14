@@ -1,29 +1,34 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { getALLjobid } from '../ApiService/api';
-
-
+//  import { getALLjobid } from '../ApiService/api';
+// // import axios from 'axios'
+import './Update.css'
 function UpdateJob() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [jobDetails, setJobDetails] = useState({
-        title: '',
-        company: '',
-        description: '',
-        skills: '',
-        places: '',
-        salary: '',
+      title: '',
+      company: '',
+      description: '',
+      skills: '',
+      places: '',
+      salary: '',
     });
-
-    useEffect(()=>{
-        const fetchALLJobs = async() =>{
-            const data =await getALLjobid(id);
-            console.log(data,"data");
-            setJobDetails (data);
-        };
-        fetchALLJobs();
-    },[id])
-
+  
+    
+  useEffect(() => {
+    
+    async function fetchJobDetails() {
+      
+        const response = await fetch(`http://127.0.0.1:8001/employers/update-job/${id}/`);
+       
+          const data = await response.json();
+    
+          setJobDetails(data);
+    
+    }
+    fetchJobDetails();
+  }, [id]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -33,7 +38,7 @@ function UpdateJob() {
     const handleUpdate = async () => {
 
         let response = await fetch(`http://127.0.0.1:8001/employers/update-job/${id}/`, {
-            method: 'PUT',
+            method: 'POST',
             body: JSON.stringify(jobDetails),
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +57,7 @@ function UpdateJob() {
 
 
     return (
-        <div className="container">
+        <div className="update_container">
             <h1>Update Job Details</h1>
             <div className="input-box">
                 <label>Job Title:</label>
@@ -74,7 +79,7 @@ function UpdateJob() {
             </div>
             <div className="input-box">
                 <label>Description:</label>
-                <textarea
+                <textarea className='input_text'
                     name="description"
                     value={jobDetails.description}
                     onChange={handleInputChange}
@@ -107,7 +112,7 @@ function UpdateJob() {
                     onChange={handleInputChange}
                 />
             </div>
-            <button onClick={handleUpdate}>Submit</button>
+            <button onClick={handleUpdate} className='btn-submit'>Submit</button>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import './EmpSignup.css'
 
 function EmpSignup() {
     const [username,setUsername]=useState('');
@@ -9,27 +9,35 @@ function EmpSignup() {
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     const [password2,setPassword2]=useState('');
-    const navgate = useNavigate();
+    const navigate = useNavigate();
 
 
-    async function SignUp()
+    async function SignUp(event)
+    
     {
-        let item ={firstname,lastnamename,email,username,password,password2}
-        console.warn(item)
+        event.preventDefault();
 
-        let result = await fetch('http://127.0.0.1:8001/account/employer_register/',{
-            method:'POST',
-            body:JSON.stringify(item),
-            headers:{
-                'Content-Type':'application/json',
-                'Accept':"application/json"
+        const item = {
+      firstname,
+      lastnamename,
+      email,
+      username,
+      password,
+      password2,
+    };
+    console.warn(item);
 
-            }
+    const response = await fetch('http://127.0.0.1:8001/account/employer_register/', {
+        method: 'POST',
+        body: JSON.stringify(item),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
         })
-        result=await result.json()
-        console.warn("result",result)
-        localStorage.setItem('user-inof',JSON.stringify(result));
-        navgate('/emplist')
+        const result = await response.json();
+        localStorage.setItem('user-info', JSON.stringify(result));
+        navigate('/emplist');
 
     }
 
@@ -38,8 +46,9 @@ function EmpSignup() {
 
     return (
         <div className='container'>
+            <div className='signup_container'>
             <h1>SignUp For Employer</h1>
-
+            <form onSubmit={SignUp}>
             <div className='form-group mb-3'>
                 <input type='text'
                 value={firstname}
@@ -49,6 +58,7 @@ function EmpSignup() {
                     placeholder="FirstName"
                 />
             </div>
+            
             <div className='form-group mb-3'>
                 <input type='text'
                 value={lastnamename}
@@ -95,11 +105,11 @@ function EmpSignup() {
                     placeholder="Confirm Password"
                 />
             </div>
-            <button onClick={SignUp} >Signup</button>
-
+            <button type='submit'className='btn-submit'>Signup</button>
+</form>
         </div>
 
-
+        </div>
 
     )
 }

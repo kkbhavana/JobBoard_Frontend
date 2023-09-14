@@ -17,9 +17,9 @@ function EmpList() {
     },[])
 
   return (
-    <div className='container'>
+    <div className='list_container'>
       <Link to='/add_job'>
-      <button>Add</button>
+      <button className='btn-update'>Add</button>
       </Link> 
     <div className='details'>
         {jobList.map((job)=>(
@@ -32,11 +32,11 @@ function EmpList() {
            
             <p>Salary : {job.salary}</p>
  <Link to={`/updatejob/${job.id}`}>
- <button>Update</button>
+ <button className='btn-update'>Update</button>
           </Link>
          
           {/* <Link to={`/detail/${product.id}`}> */}
- <button>Delete</button>
+ <button className='btn-update'>Delete</button>
           {/* </Link> */}
         </div>
         ))}

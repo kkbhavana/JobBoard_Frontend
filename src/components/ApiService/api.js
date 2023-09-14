@@ -23,7 +23,7 @@ export const getALLjoblists = async () => {
 
 export const getALLjobid = async (id) => {
 
-    const response = await axios.put(`${BASE_URL}/employers/update-job/${id}`)
+    const response = await axios.patch(`${BASE_URL}/employers/update-job/${id}`)
     return response.data;
 }
 

@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import './CreatJob.css'
 function CreateJob() {
       const [title, setTitle] = useState('');
       const [company, setCompany] = useState('');
@@ -34,7 +34,7 @@ function CreateJob() {
 
 
       return (
-            <div className="container">
+            <div className="create_container">
                   <h1>Job Details</h1>
                  
                         <div className="input-box">
@@ -87,7 +87,7 @@ function CreateJob() {
                         </div>
                        
                         
-                        <button onClick={Jobsdetails}>Submit</button>
+                        <button onClick={Jobsdetails}className='btn-submit'>Submit</button>
                  
             </div>
       );

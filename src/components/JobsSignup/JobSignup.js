@@ -1,35 +1,44 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
-function JobSignup() {
-    const [username,setUsername]=useState('')
-    const [firstname,setFirstname]=useState('')
-    const [lastname,setLastname]=useState('')
-    const [email,setEmail]=useState('')
-    const [password,setPassword]=useState('')
-    const [password2,setPassword2]=useState('')
-    const navgate = useNavigate();
-    async function SignUp()
-    {
-        let item ={firstname,lastname,email,username,password,password2}
-        console.warn(item)
+function JobseekerSignup() {
+    const [username,setUsername]=useState('');
+    const [firstname,setFirstname]=useState('');
+    const [lastnamename,setLastname]=useState('');
+    const [email,setEmail]=useState('');
+    const [password,setPassword]=useState('');
+    const [password2,setPassword2]=useState('');
+    const navigate = useNavigate();
 
-        let result = await fetch('http://127.0.0.1:8001/account/jobseeker_register/',{
-            method:'POST',
-           
-            headers:{
-                'Content-Type':'application/json',
-                'Accept':"application/json"
 
-            },
-            body:JSON.stringify(item),
-        });
-        result=await result.json()
-        console.warn("result",result)
-        localStorage.setItem('user-inof',JSON.stringify(result));
-        navgate('/joblist')
+    async function SignUp(event)
     
+    {
+        event.preventDefault();
+
+        const item = {
+      firstname,
+      lastnamename,
+      email,
+      username,
+      password,
+      password2,
+    };
+    console.warn(item);
+
+    const response = await fetch('http://127.0.0.1:8001/account/jobseeker_register/', {
+        method: 'POST',
+        body: JSON.stringify(item),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        })
+        const result = await response.json();
+        localStorage.setItem('user-info', JSON.stringify(result));
+        navigate('/joblist');
+
     }
 
 
@@ -37,8 +46,9 @@ function JobSignup() {
 
     return (
         <div className='container'>
-            <h1>SignUp For Employer</h1>
-
+            <div className='signup_container'>
+            <h1>SignUp For Jobseeker</h1>
+            <form onSubmit={SignUp}>
             <div className='form-group mb-3'>
                 <input type='text'
                 value={firstname}
@@ -50,7 +60,7 @@ function JobSignup() {
             </div>
             <div className='form-group mb-3'>
                 <input type='text'
-                value={lastname}
+                value={lastnamename}
                 onChange={(e)=> setLastname(e.target.value)}
                     className='form-control'
                     name='lastname'
@@ -94,14 +104,14 @@ function JobSignup() {
                     placeholder="Confirm Password"
                 />
             </div>
-            <button onClick={SignUp} >Signup</button>
-
+            <button type='submit' className='btn-submit'>Signup</button>
+</form>
         </div>
 
-
+        </div>
 
     )
 }
 
 
-export default JobSignup
+export default JobseekerSignup
