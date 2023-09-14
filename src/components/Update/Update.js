@@ -38,7 +38,7 @@ function UpdateJob() {
     const handleUpdate = async () => {
 
         let response = await fetch(`http://127.0.0.1:8001/employers/update-job/${id}/`, {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify(jobDetails),
             headers: {
                 'Content-Type': 'application/json',

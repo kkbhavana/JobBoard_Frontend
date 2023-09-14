@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-
+    margin: 100px;
 }
 .title_card{
     margin: 50px;

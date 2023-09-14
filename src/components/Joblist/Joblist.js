@@ -14,7 +14,7 @@ function Joblist() {
         fetchALLJobslist();
     },[])
   return (
-      <div className='container'>
+      <div className='list_container'>
   
     <div className='details'>
         {jobslist.map((job)=>(
@@ -29,7 +29,7 @@ function Joblist() {
  
          
           <Link to={`/applicaton_form/`}>
- <button>Apply</button>
+ <button className='btn-submit'>Apply</button>
           </Link>
         </div>
         ))}

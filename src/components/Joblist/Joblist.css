@@ -1,12 +1,19 @@
 .container{
-    margin: 80px;
-   
+  margin: 80px;
+ 
 }
 .jobdetails{
-  margin: 20px;
-  padding: 20px 40px;
-  box-shadow: 5px 5px 10px rgb(218, 215, 220);
+margin: 20px;
+padding: 20px 40px;
+box-shadow: 5px 5px 10px rgb(218, 215, 220);
+color: #fff;
 }
-button{
-    margin: 20px;
+.btn-submit{
+margin: 20px;
+padding: 10px 15px;
+cursor: pointer;
+background-color:#8e30d1;
+border: none;
+color: #fff;
+border-radius: 20px;
 }

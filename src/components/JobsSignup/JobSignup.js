@@ -45,7 +45,7 @@ function JobseekerSignup() {
     
 
     return (
-        <div className='container'>
+        <div className='seeker_container'>
             <div className='signup_container'>
             <h1>SignUp For Jobseeker</h1>
             <form onSubmit={SignUp}>

@@ -3,7 +3,7 @@ import React from 'react'
 import './Front.css'
 function Home() {
   return (
-    <div className='home_container'>
+    <div className='front_container'>
       <div className='title_card'>
       <h1>SignUp</h1>
        <Link to={`/empsignup/`}>
