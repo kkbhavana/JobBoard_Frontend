@@ -1,0 +1,13 @@
+.confirmation_container{
+    padding: 20px 40px;
+    box-shadow: 5px 5px 10px rgb(218, 215, 220);
+   width: max-content;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    justify-content: center;  
+}
+img{
+    width: 100px;
+    height: 100px;
+}
