@@ -45,7 +45,7 @@ function EmpSignup() {
     
 
     return (
-        <div className='container'>
+        <div className='emp_container'>
             <div className='signup_container'>
             <h1>SignUp For Employer</h1>
             <form onSubmit={SignUp}>

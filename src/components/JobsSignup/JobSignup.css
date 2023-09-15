@@ -1,29 +1,24 @@
-.container {
+.seeker_container{
     justify-content: center;
     text-align: center;
 }
-
-.signup_container {
+.signup_container{
     padding: 20px 40px;
     box-shadow: 5px 5px 10px rgb(218, 215, 220);
-    width: max-content;
+    width: max-content;   
     margin: auto;
+    backdrop-filter: blur(10px);
 }
-
-.form-group {
-    margin-bottom: 15px;
-}
-
 .form-group input {
+    margin-bottom: 15px;
     padding: 10px;
     width: 75%;
     font-size: 16px;
     box-shadow: inset -2px -2px 5px rgb(207, 158, 240);
-    border: none;
-
+   border: none;
+   
 }
-
-.btn-submit {
+.btn-submit{
     padding: 10px 15px;
     cursor: pointer;
     background-color:#8e30d1;

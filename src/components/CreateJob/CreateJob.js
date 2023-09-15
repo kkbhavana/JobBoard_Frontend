@@ -38,7 +38,7 @@ function CreateJob() {
                   <h1>Job Details</h1>
                  
                         <div className="input-box">
-                              <label>Job Title :</label>
+                              <label className='input-label'>Job Title</label>
                               <input
                                     type="text"
                                     value={title}
@@ -46,7 +46,7 @@ function CreateJob() {
                               />
                         </div>
                         <div className="input-box">
-                              <label>Company Name :</label>
+                              <label className='input-label'>Company Name</label>
                               <input
                                     type="text"
                                     value={company}
@@ -54,15 +54,16 @@ function CreateJob() {
                               />
                         </div>
                         <div className="input-box">
-                              <label>Description :</label>
-                             <textarea
+                              <label className='input-label'>Description</label>
+                             <textarea rows={10} cols={30}
+                             className='input-text'
                                     type="text"
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
                               />
                         </div>
                         <div className="input-box">
-                              <label>Skills:</label>
+                              <label className='input-label'>Skills</label>
                               <input
                                     type="text"
                                     value={skills}
@@ -70,7 +71,7 @@ function CreateJob() {
                               />
                         </div>
                         <div className="input-box">
-                              <label>Place :</label>
+                              <label className='input-label'>Place</label>
                               <input
                                     type="text"
                                     value={places}
@@ -78,7 +79,7 @@ function CreateJob() {
                               />
                         </div>
                         <div className="input-box">
-                              <label>Salary :</label>
+                              <label className='input-label'>Salary</label>
                               <input
                                     type="text"
                                     value={salary}

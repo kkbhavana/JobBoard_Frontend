@@ -2,7 +2,7 @@ body{
     background-image: url('C:\Users\user\vscod projects\Job_Frontend\jobs\src\components\Images\Homepage bgi.jpg');
     background-size: cover;
     background-repeat:no-repeat ;
- 
+ /* background-color: #d2c9d9; */
     
 }
 .home_container{

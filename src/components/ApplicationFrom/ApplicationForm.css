@@ -1,0 +1,36 @@
+.apply_container{
+    padding: 20px 40px;
+    box-shadow: 5px 5px 10px rgb(218, 215, 220);
+   width: max-content;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    justify-content: center; 
+}
+.form-input input{
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: inset -2px -2px 5px rgb(207, 158, 240);
+    border: none;
+    width: 100%;
+    max-width: 250px;
+    margin-left: 20px; 
+}
+
+.form-resume input{
+    margin-top: 20px;
+ 
+}
+.form-checkbox input{
+    margin-top: 20px;
+    width: 30px;
+    height: 20px; 
+  width: 20px;
+  box-shadow: inset -2px -2px 5px rgb(207, 158, 240);
+  color: #000;
+}
+form label{
+    font-size: 16px;
+    
+}

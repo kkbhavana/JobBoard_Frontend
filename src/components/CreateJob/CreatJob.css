@@ -8,6 +8,13 @@
     justify-content: center;
 
 }
+.input-label{
+    display:block;
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .input-box input {
     margin-bottom: 15px;
@@ -16,7 +23,8 @@
     box-shadow: inset -2px -2px 5px rgb(207, 158, 240);
     border: none;
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
+    margin-left: 20px;
 
 }
 
@@ -24,10 +32,10 @@
 .input-box .input_text {
     margin-bottom: 15px;
     padding: 10px;
-
     font-size: 16px;
     box-shadow: inset -2px -2px 5px rgb(207, 158, 240);
     border: none;
+    margin-left: 20px;
 
 }
 

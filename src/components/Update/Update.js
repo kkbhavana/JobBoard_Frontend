@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-//  import { getALLjobid } from '../ApiService/api';
-// // import axios from 'axios'
 import './Update.css'
 function UpdateJob() {
     const { id } = useParams();
@@ -18,9 +16,9 @@ function UpdateJob() {
     
   useEffect(() => {
     
-    async function fetchJobDetails() {
+    async function fetchJobDetails(id) {
       
-        const response = await fetch(`http://127.0.0.1:8001/employers/update-job/${id}/`);
+        const response = await fetch(`http://127.0.0.1:8001/employers/update-job/`+id);
        
           const data = await response.json();
     
@@ -60,7 +58,7 @@ function UpdateJob() {
         <div className="update_container">
             <h1>Update Job Details</h1>
             <div className="input-box">
-                <label>Job Title:</label>
+                <label className='input-label'>Job Title:</label>
                 <input
                     type="text"
                     name="title"
@@ -69,7 +67,7 @@ function UpdateJob() {
                 />
             </div>
             <div className="input-box">
-                <label>Company Name:</label>
+                <label className='input-label'>Company Name</label>
                 <input
                     type="text"
                     name="company"
@@ -78,15 +76,15 @@ function UpdateJob() {
                 />
             </div>
             <div className="input-box">
-                <label>Description:</label>
-                <textarea className='input_text'
-                    name="description"
+                     <label className='input-label'>Description</label>   
+                     <textarea className='input-text'
+                     rows={10} cols={30}      
                     value={jobDetails.description}
                     onChange={handleInputChange}
                 />
             </div>
             <div className="input-box">
-                <label>Skills:</label>
+                <label className='input-label'>Skills</label>
                 <input
                     type="text"
                     name="skills"
@@ -95,7 +93,7 @@ function UpdateJob() {
                 />
             </div>
             <div className="input-box">
-                <label>Place:</label>
+                <label className='input-label'>Place</label>
                 <input
                     type="text"
                     name="places"
@@ -104,7 +102,7 @@ function UpdateJob() {
                 />
             </div>
             <div className="input-box">
-                <label>Salary:</label>
+                <label className='input-label'>Salary</label>
                 <input
                     type="text"
                     name="salary"

@@ -28,7 +28,7 @@ function Joblist() {
             <p>Salary : {job.salary}</p>
  
          
-          <Link to={`/applicaton_form/`}>
+          <Link to={`/applicaton_form/${job.id}`}>
  <button className='btn-submit'>Apply</button>
           </Link>
         </div>

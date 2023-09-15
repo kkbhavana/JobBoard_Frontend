@@ -1,4 +1,6 @@
-
+/* body{
+  background:#fff;
+} */
 .container{
     margin: 80px;
    
@@ -8,6 +10,7 @@
   padding: 20px 40px;
   box-shadow: 5px 5px 10px rgb(218, 215, 220);
   color: #fff;
+  font-size: 16px;
 }
 .btn-update{
   margin: 20px;

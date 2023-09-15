@@ -1,6 +1,6 @@
 import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import './JobSignup.css'
 
 function JobseekerSignup() {
     const [username,setUsername]=useState('');
@@ -37,7 +37,7 @@ function JobseekerSignup() {
         })
         const result = await response.json();
         localStorage.setItem('user-info', JSON.stringify(result));
-        navigate('/joblist');
+        navigate('/joblist/');
 
     }
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import {getALLjobitems} from '../ApiService/api' 
 import { Link } from 'react-router-dom';
 import './EmpList.css'
 
@@ -8,23 +7,22 @@ import './EmpList.css'
 function EmpList() {
  
   const [jobList, setJobList] = useState([])
-  // const navigate = useNavigate();
   useEffect(() => {
 
     getJoblist()
   }, [])
   async function deleteOperation(id) {
-    let result = fetch('http://127.0.0.1:8001/employers/delete-job/' + id, {
+    let result = await fetch('http://127.0.0.1:8001/employers/delete-job/'+id, {
       method: 'DELETE'
-    })
-    result = await result.json()
+    });
+    result = await result.json();
     console.log('result', result)
     getJoblist()
   }
   async function getJoblist() {
     let result = await fetch('http://127.0.0.1:8001/employers/list_create-job/')
     result = await result.json()
-    console.log('res')
+    console.log('result',result)
     setJobList(result)
   }
 
@@ -47,9 +45,9 @@ function EmpList() {
               <button className='btn-update'>Update</button>
             </Link>
 
-            {/* <Link to={`/deletejob/${job.id}`}> */}
+    
             <button className='btn-update' onClick={() => deleteOperation(job.id)}>Delete</button>
-            {/* </Link> */}
+          
           </div>
         ))}
 

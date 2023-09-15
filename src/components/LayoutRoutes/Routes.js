@@ -13,6 +13,8 @@ import Joblist from '../Joblist/Joblist'
 import Update from '../Update/Update'
 import Delete from '../Delete/Delete'
 
+import Confirmation from '../ApplicationFrom/Confirmation'
+
 
 function RoutesLayout() {
   return (
@@ -28,10 +30,11 @@ function RoutesLayout() {
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/add_job' element={<CreateJob/>}/>
                 <Route path='/emplist' element={<Emplist/>}/>
-                <Route path='/joblist' element={<Joblist/>}/>
+                <Route path='/joblist/' element={<Joblist/>}/>
                 <Route path='/updatejob/:id/' element={<Update/>}/>
-                <Route path='/deletejob/:id/' element={<Delete/>}/>
-                <Route path='/applicaton_form' element={<ApplicationForm/>}/>
+                <Route path='/deletejob/' element={<Delete/>}/>
+                <Route path='/applicaton_form/:id' element={<ApplicationForm/>}/>
+                <Route path='/confirmationpage/' element={<Confirmation/>}/>
            </Routes>
        
       </Router>

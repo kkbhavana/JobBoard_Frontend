@@ -1,6 +1,7 @@
 import React from 'react'
  import {Link} from 'react-router-dom'
 import './Front.css'
+
 function Home() {
   return (
     <div className='front_container'>
@@ -13,6 +14,8 @@ function Home() {
           <button >JobSeeker</button>
           </Link>
           </div>
+         
+
     </div>
   )
 }
