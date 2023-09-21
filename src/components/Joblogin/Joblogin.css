@@ -2,14 +2,14 @@
     justify-content: center;
     text-align: center;
 }
-.signup_container{
+.login_container{
     padding: 20px 40px;
     box-shadow: 5px 5px 10px rgb(218, 215, 220);
     width: 350px;   
     margin: auto;
     backdrop-filter: blur(10px);
 }
-.signup_container h1{
+.login_container h1{
     color: #5d247a;
 
 }
@@ -31,5 +31,9 @@
     border-radius: 20px;
     font-size: 16px;
     width: 150px;
-   
+}
+.signup-link {
+    color:#fff;
+ font-size: 16px;
+ font-weight: bold;
 }

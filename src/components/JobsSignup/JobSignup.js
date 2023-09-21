@@ -56,6 +56,7 @@ function JobseekerSignup() {
                     className='form-control'
                     name='firstname'
                     placeholder="FirstName"
+                    autoComplete="firstname" 
                 />
             </div>
             <div className='form-group mb-3'>
@@ -65,6 +66,7 @@ function JobseekerSignup() {
                     className='form-control'
                     name='lastname'
                     placeholder="LastName"
+                    autoComplete="lastname"
                 />
             </div>
             <div className='form-group mb-3'>
@@ -74,6 +76,7 @@ function JobseekerSignup() {
                     className='form-control'
                     name='username'
                     placeholder="UserName"
+                    autoComplete="usename"
                 />
             </div>
 
@@ -84,6 +87,7 @@ function JobseekerSignup() {
                     className='form-control'
                     name='email'
                     placeholder="Email"
+                    autoComplete="email"
                 />
             </div>
             <div className='form-group mb-3'>
@@ -93,6 +97,7 @@ function JobseekerSignup() {
                     className='form-control'
                     name='password'
                     placeholder="Password"
+                    autoComplete="current-password"
                 />
             </div>
             <div className='form-group mb-3'>
@@ -102,6 +107,7 @@ function JobseekerSignup() {
                     className='form-control'
                     name='password2'
                     placeholder="Confirm Password"
+                    autoComplete="current-password"
                 />
             </div>
             <button type='submit' className='btn-submit'>Signup</button>

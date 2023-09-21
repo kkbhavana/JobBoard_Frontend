@@ -28,7 +28,7 @@ function EmpList() {
 
   return (
     <div className='list_container'>
-      <Link to='/add_job'>
+      <Link to='/add_job/'>
         <button className='btn-update'>Add</button>
       </Link>
       <div className='details'>

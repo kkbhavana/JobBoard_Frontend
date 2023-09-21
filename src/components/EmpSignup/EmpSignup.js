@@ -35,7 +35,7 @@ function EmpSignup() {
         })
         const result = await response.json();
         localStorage.setItem('user-info', JSON.stringify(result));
-        navigate('/emplist');
+        navigate('/emplist/');
 
     }
 
@@ -104,7 +104,7 @@ function EmpSignup() {
                         />
                     </div>
                     <button type='submit' className='btn-submit'>SignUp</button>
-              
+                    
             
                 </form>
             </div>
