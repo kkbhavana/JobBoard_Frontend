@@ -16,17 +16,17 @@ function UpdateJob() {
     
   useEffect(() => {
     
-    async function fetchJobDetails(id) {
-      
-        const response = await fetch(`http://127.0.0.1:8001/employers/update-job/`+id);
+    async function fetchJobDetails() {
        
-          const data = await response.json();
-    
-          setJobDetails(data);
-    
-    }
-    fetchJobDetails();
-  }, [id]);
+          const response = await fetch(`http://127.0.0.1:8001/employers/update-job/${id}/`);
+          
+            const data = await response.json();
+            setJobDetails(data);
+          
+        
+      }
+      fetchJobDetails();
+    }, [id]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -76,13 +76,16 @@ function UpdateJob() {
                 />
             </div>
             <div className="input-box">
-                     <label className='input-label'>Description</label>   
-                     <textarea className='input-text'
-                     rows={10} cols={30}      
-                    value={jobDetails.description}
-                    onChange={handleInputChange}
-                />
-            </div>
+        <label className='input-label'>Description</label>
+        <textarea
+          className='input-text'
+          rows={10}
+          cols={30}
+          name="description"
+          value={jobDetails.description}
+          onChange={handleInputChange}
+        />
+      </div>
             <div className="input-box">
                 <label className='input-label'>Skills</label>
                 <input

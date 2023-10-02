@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 import './Joblogin.css'
 
@@ -36,7 +36,7 @@ function Joblogin() {
           localStorage.setItem('user-info', JSON.stringify(result));
           navigate('/joblist/');
         } else {
-          console.log('Authentication failed or user is an employer');
+          navigate('/emplist/');
         }
       }
       
@@ -54,7 +54,7 @@ function Joblogin() {
                             onChange={(e) => setUsername(e.target.value)}
                             className='form-control'
                             name='username'
-                            placeholder="UserName"
+                            placeholder="Username"
                             autoComplete="username"
                         />
                     </div>
@@ -80,9 +80,6 @@ function Joblogin() {
                         />
                     </div>
                     <button type='submit' className='btn-submit'>LogIn</button>
-                    <Link to={'/jobsignup/'}>
-                        <p className='signup-link'>Register for free</p>
-                    </Link>
                 </form>
             </div>
 

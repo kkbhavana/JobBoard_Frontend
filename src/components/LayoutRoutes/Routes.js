@@ -25,7 +25,7 @@ function RoutesLayout() {
                 <Route path='/' element={<Home/>}/>
                  <Route path='/empsignup/' element={<EmpSignup/>}/>
                 <Route path='/jobsignup/' element={<JobSignup/>}/>
-                <Route path='/joblogin/' element={<Joblogin/>}/>
+                <Route path='/userlogin/' element={<Joblogin/>}/>
                 <Route path='/add_job/' element={<CreateJob/>}/>
                 <Route path='/emplist/' element={<Emplist/>}/>
                 <Route path='/joblist/' element={<Joblist/>}/>

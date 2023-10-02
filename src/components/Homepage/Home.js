@@ -8,9 +8,9 @@ function Home() {
       
       <div className='title_card'>
       <div className='title'>FIND THE PERFECT JOB</div>
-      <p>Login for jobseeker</p>
-       <Link to={`/joblogin/`}>
-          <button className='register_title'>Login</button>
+      <p>Register for free</p>
+       <Link to={'/jobsignup/'}>
+          <button className='register_title'>SignUp</button>
           </Link>
           </div>
           

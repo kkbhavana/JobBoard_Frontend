@@ -1,5 +1,5 @@
 import React, {  useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './JobSignup.css'
 
 function JobseekerSignup() {
@@ -112,6 +112,9 @@ function JobseekerSignup() {
             </div>
             <button type='submit' className='btn-submit'>Signup</button>
 </form>
+<Link to ={'/empsignup/'}>
+<p>Signup for employer</p>
+</Link>
         </div>
 
         </div>
